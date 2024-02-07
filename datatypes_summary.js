@@ -5,6 +5,21 @@
 
     // non-primitive / reference type
         ==> Arrays, Objects, Functions
+
+:==> Return type of variables in JavaScript
+1) Primitive Datatypes
+       Number => number
+       String  => string
+       Boolean  => boolean
+       null  => object
+       undefined  =>  undefined
+       Symbol  =>  symbol
+       BigInt  =>  bigint
+
+2) Non-primitive Datatypes
+       Arrays  =>  object
+       Function  =>  function
+       Object  =>  object
     */
 const scoreVallued = 10.4; //Number
 const isLoggedIn = true;//boolean
@@ -25,3 +40,25 @@ function sum (a,b){
 }//function declaration
 
 const sum1 = sum(122,33);
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap(reference type)
+
+let myName = 'Bharat';
+let myFullName = myName;
+myFullName ="Bharat Sharma"; // because value is stored in stack so both will have unique values.
+
+console.log(myFullName)
+console.log(myName);
+
+//value by reference
+let user = {
+    email: "abc@gmail.com",
+    upi: "user@upi"
+};
+let userTwo = user ;
+userTwo.email = "user@gmail.com"; // value changed in both the user because value was given through reference of value.
+
+console.log(user.email);
+console.log(userTwo.email);
